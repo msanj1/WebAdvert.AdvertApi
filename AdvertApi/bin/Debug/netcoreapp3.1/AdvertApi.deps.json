@@ -25,7 +25,7 @@
       "AdvertApi/1.0.0": {
         "dependencies": {
           "AWSSDK.DynamoDBv2": "3.3.106.33",
-          "AdvertApi.Models": "1.0.0",
+          "AdvertApi.Models.Ms": "1.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -383,7 +383,7 @@
       },
       "Microsoft.Extensions.Primitives/3.0.0": {},
       "System.Reflection.Emit/4.7.0": {},
-      "AdvertApi.Models/1.0.0": {
+      "AdvertApi.Models.Ms/1.0.0": {
         "runtime": {
           "AdvertApi.Models.dll": {}
         },
@@ -2154,7 +2154,7 @@
       "path": "system.reflection.emit/4.7.0",
       "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
     },
-    "AdvertApi.Models/1.0.0": {
+    "AdvertApi.Models.Ms/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

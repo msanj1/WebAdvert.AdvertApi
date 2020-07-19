@@ -11,11 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("AdvertApi.Models")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Mohsen Sanjari")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("AdvertApi.Models")]
+[assembly: System.Reflection.AssemblyProductAttribute("Web Advert Microservices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdvertApi.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 

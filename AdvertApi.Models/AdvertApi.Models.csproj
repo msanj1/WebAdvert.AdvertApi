@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Mohsen Sanjari</Authors>
+    <Company>Mohsen Sanjari</Company>
+    <Product>Web Advert Microservices</Product>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>AdvertApi.Models.Ms</PackageId>
+    <PackageProjectUrl>https://github.com/msanj1/WebAdvert.AdvertApi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/msanj1/WebAdvert.AdvertApi</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
 </Project>

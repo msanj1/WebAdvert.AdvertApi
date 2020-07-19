@@ -99,14 +99,14 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "AdvertApi.Models/1.0.0": {
+      "AdvertApi.Models.Ms/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "compile": {
-          "bin/placeholder/AdvertApi.Models.dll": {}
+          "bin/placeholder/AdvertApi.Models.Ms.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AdvertApi.Models.dll": {}
+          "bin/placeholder/AdvertApi.Models.Ms.dll": {}
         }
       }
     }
@@ -396,7 +396,7 @@
         "version.txt"
       ]
     },
-    "AdvertApi.Models/1.0.0": {
+    "AdvertApi.Models.Ms/1.0.0": {
       "type": "project",
       "path": "../AdvertApi.Models/AdvertApi.Models.csproj",
       "msbuildProject": "../AdvertApi.Models/AdvertApi.Models.csproj"
@@ -405,7 +405,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AWSSDK.DynamoDBv2 >= 3.3.106.33",
-      "AdvertApi.Models >= 1.0.0",
+      "AdvertApi.Models.Ms >= 1.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.0.1"
     ]
   },
