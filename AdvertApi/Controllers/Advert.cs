@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using AdvertApi.Models;
+using AdvertApi.Models.Messages;
 using AdvertApi.Services;
+using Amazon.SimpleNotificationService;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,10 +19,13 @@ namespace AdvertApi.Controllers
     [Route("adverts/v1")]
     public class Advert : ControllerBase
     {
+        private readonly IConfiguration _configuration;
+
         private readonly IAdvertStorageService _advertStorageService;
-        public Advert(IAdvertStorageService advertStorageService)
+        public Advert(IAdvertStorageService advertStorageService, IConfiguration configuration)
         {
             _advertStorageService = advertStorageService;
+            _configuration = configuration;
         }
 
         [HttpPost]
@@ -48,6 +56,7 @@ namespace AdvertApi.Controllers
             try
             {
                 await _advertStorageService.Confirm(model);
+                await RaiseAdvertConfirmedMessage(model);
             }
             catch (KeyNotFoundException)
             {
@@ -55,6 +64,22 @@ namespace AdvertApi.Controllers
             }
 
             return Ok();
+        }
+
+        private async Task RaiseAdvertConfirmedMessage(ConfirmAdvertModel model)
+        {
+            var topicArn = _configuration.GetValue<string>("TopicArn");
+            var dbmodel = await _advertStorageService.GetById(model.Id.ToString());
+            using (var client = new AmazonSimpleNotificationServiceClient())
+            {
+                var message = new AdvertConfirmedMessage()
+                {
+                    Id = dbmodel.Id,
+                    Title = dbmodel.Title
+                };
+                var messageJson = JsonConvert.SerializeObject(message);
+                await client.PublishAsync(topicArn, messageJson);
+            }
         }
     }
 }

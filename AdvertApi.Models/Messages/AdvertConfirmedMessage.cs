@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdvertApi.Models
+namespace AdvertApi.Models.Messages
 {
-    public class ConfirmAdvertModel
+    public class AdvertConfirmedMessage
     {
         public string Id { get; set; }
-        public AdvertStatus Status { get; set; }
+        public string Title { get; set; }
     }
 }

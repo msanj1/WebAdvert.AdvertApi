@@ -5,3 +5,4 @@ C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi.Models\obj\Debug\
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi.Models\obj\Debug\netcoreapp3.1\AdvertApi.Models.AssemblyInfo.cs
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi.Models\obj\Debug\netcoreapp3.1\AdvertApi.Models.dll
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi.Models\obj\Debug\netcoreapp3.1\AdvertApi.Models.pdb
+C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi.Models\obj\Debug\netcoreapp3.1\AdvertApi.Models.csprojAssemblyReference.cache

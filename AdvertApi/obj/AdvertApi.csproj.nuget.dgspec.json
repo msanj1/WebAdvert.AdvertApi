@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\mohse\\Documents\\Sources\\WebAdvert.AdvertApi\\AdvertApi.Models\\AdvertApi.Models.csproj": {
-      "version": "1.0.0",
+      "version": "1.1.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\mohse\\Documents\\Sources\\WebAdvert.AdvertApi\\AdvertApi.Models\\AdvertApi.Models.csproj",
         "projectName": "AdvertApi.Models.Ms",
@@ -112,9 +112,17 @@
               "target": "Package",
               "version": "[3.3.106.33, )"
             },
+            "AWSSDK.SimpleNotificationService": {
+              "target": "Package",
+              "version": "[3.3.102.8, )"
+            },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
           "imports": [

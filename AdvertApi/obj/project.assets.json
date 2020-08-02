@@ -29,7 +29,7 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "AWSSDK.Core/3.3.107.25": {
+      "AWSSDK.Core/3.3.107.31": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/AWSSDK.Core.dll": {}
@@ -48,6 +48,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {}
+        }
+      },
+      "AWSSDK.SimpleNotificationService/3.3.102.8": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.3.107.31, 3.4.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.SimpleNotificationService.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.SimpleNotificationService.dll": {}
         }
       },
       "Microsoft.CSharp/4.7.0": {
@@ -90,6 +102,15 @@
           "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "System.Reflection.Emit/4.7.0": {
         "type": "package",
         "compile": {
@@ -99,7 +120,7 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "AdvertApi.Models.Ms/1.0.0": {
+      "AdvertApi.Models.Ms/1.1.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "compile": {
@@ -141,15 +162,15 @@
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
-    "AWSSDK.Core/3.3.107.25": {
-      "sha512": "DBfwog6DFIa37qfGJ49gw5XL7hEjz/ihA1w7kGzB1ptE3vmp1SuZx5AfaSVI5QvuO5RFAlLZPD94aLiDjAPpdw==",
+    "AWSSDK.Core/3.3.107.31": {
+      "sha512": "GFwv1c2AO8fJ+NuQUVFNwoH18QQe5G0tI94DOjSWGcxzO/L22JAh2tBTI9Cd2SFyxo77Ip0UCzgHNVZNRL30nA==",
       "type": "package",
-      "path": "awssdk.core/3.3.107.25",
+      "path": "awssdk.core/3.3.107.31",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.3.3.107.25.nupkg.sha512",
+        "awssdk.core.3.3.107.31.nupkg.sha512",
         "awssdk.core.nuspec",
         "lib/MonoAndroid10/AWSSDK.Core.XML",
         "lib/MonoAndroid10/AWSSDK.Core.dll",
@@ -226,6 +247,46 @@
         "lib/uap/AWSSDK.DynamoDBv2.XML",
         "lib/uap/AWSSDK.DynamoDBv2.dll",
         "lib/uap/AWSSDK.DynamoDBv2.pdb",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "AWSSDK.SimpleNotificationService/3.3.102.8": {
+      "sha512": "pLLmV6kL5oyS+TE9QtnEFUnGLLElSENlt8gEriY1TuqFbMbYMyjBlSh+w7ihBpZd7bkZZJuy9IlDNLWNko5lcg==",
+      "type": "package",
+      "path": "awssdk.simplenotificationservice/3.3.102.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.SimpleNotificationService.CodeAnalysis.dll",
+        "awssdk.simplenotificationservice.3.3.102.8.nupkg.sha512",
+        "awssdk.simplenotificationservice.nuspec",
+        "lib/MonoAndroid10/AWSSDK.SimpleNotificationService.XML",
+        "lib/MonoAndroid10/AWSSDK.SimpleNotificationService.dll",
+        "lib/MonoTouch10/AWSSDK.SimpleNotificationService.XML",
+        "lib/MonoTouch10/AWSSDK.SimpleNotificationService.dll",
+        "lib/MonoTouch10/AWSSDK.SimpleNotificationService.pdb",
+        "lib/Xamarin.iOS10/AWSSDK.SimpleNotificationService.XML",
+        "lib/Xamarin.iOS10/AWSSDK.SimpleNotificationService.dll",
+        "lib/net35/AWSSDK.SimpleNotificationService.dll",
+        "lib/net35/AWSSDK.SimpleNotificationService.pdb",
+        "lib/net35/AWSSDK.SimpleNotificationService.xml",
+        "lib/net45/AWSSDK.SimpleNotificationService.dll",
+        "lib/net45/AWSSDK.SimpleNotificationService.pdb",
+        "lib/net45/AWSSDK.SimpleNotificationService.xml",
+        "lib/netstandard1.3/AWSSDK.SimpleNotificationService.dll",
+        "lib/netstandard1.3/AWSSDK.SimpleNotificationService.pdb",
+        "lib/netstandard1.3/AWSSDK.SimpleNotificationService.xml",
+        "lib/netstandard2.0/AWSSDK.SimpleNotificationService.dll",
+        "lib/netstandard2.0/AWSSDK.SimpleNotificationService.pdb",
+        "lib/netstandard2.0/AWSSDK.SimpleNotificationService.xml",
+        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.SimpleNotificationService.XML",
+        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.SimpleNotificationService.dll",
+        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.SimpleNotificationService.pdb",
+        "lib/uap/AWSSDK.SimpleNotificationService.XML",
+        "lib/uap/AWSSDK.SimpleNotificationService.dll",
+        "lib/uap/AWSSDK.SimpleNotificationService.pdb",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
@@ -342,6 +403,37 @@
         "microsoft.extensions.primitives.nuspec"
       ]
     },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "System.Reflection.Emit/4.7.0": {
       "sha512": "VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
       "type": "package",
@@ -396,7 +488,7 @@
         "version.txt"
       ]
     },
-    "AdvertApi.Models.Ms/1.0.0": {
+    "AdvertApi.Models.Ms/1.1.1": {
       "type": "project",
       "path": "../AdvertApi.Models/AdvertApi.Models.csproj",
       "msbuildProject": "../AdvertApi.Models/AdvertApi.Models.csproj"
@@ -405,8 +497,10 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AWSSDK.DynamoDBv2 >= 3.3.106.33",
-      "AdvertApi.Models.Ms >= 1.0.0",
-      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.0.1"
+      "AWSSDK.SimpleNotificationService >= 3.3.102.8",
+      "AdvertApi.Models.Ms >= 1.1.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.0.1",
+      "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
@@ -464,9 +558,17 @@
             "target": "Package",
             "version": "[3.3.106.33, )"
           },
+          "AWSSDK.SimpleNotificationService": {
+            "target": "Package",
+            "version": "[3.3.102.8, )"
+          },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[8.0.1, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
           }
         },
         "imports": [

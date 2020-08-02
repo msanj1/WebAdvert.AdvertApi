@@ -20,7 +20,7 @@ namespace AdvertApi.Services
         public async Task<string> Add(AdvertModel model)
         {
             var dbModel = _mapper.Map<AdvertDbModel>(model);
-            dbModel.Id = new Guid().ToString();
+            dbModel.Id = Guid.NewGuid().ToString();
             dbModel.CreationDateTime = DateTime.UtcNow;
             dbModel.Status = AdvertStatus.Pending;
 
@@ -71,6 +71,23 @@ namespace AdvertApi.Services
                     {
                         await context.DeleteAsync(record);
                     }
+                }
+            }
+        }
+
+        public async Task<AdvertDbModel> GetById(string id)
+        {
+            using (var client = new AmazonDynamoDBClient())
+            {
+                using (var context = new DynamoDBContext(client))
+                {
+                    var record = await context.LoadAsync<AdvertDbModel>(id);
+                    if (record == null)
+                    {
+                        throw new KeyNotFoundException($"A record with ID={id} was not found.");
+                    }
+
+                    return record;
                 }
             }
         }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -10,6 +10,7 @@
     <PackageProjectUrl>https://github.com/msanj1/WebAdvert.AdvertApi</PackageProjectUrl>
     <RepositoryUrl>https://github.com/msanj1/WebAdvert.AdvertApi</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.1.1</Version>
   </PropertyGroup>
 
 </Project>

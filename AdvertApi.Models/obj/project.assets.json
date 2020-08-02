@@ -14,10 +14,10 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.1.1",
     "restore": {
       "projectUniqueName": "C:\\Users\\mohse\\Documents\\Sources\\WebAdvert.AdvertApi\\AdvertApi.Models\\AdvertApi.Models.csproj",
-      "projectName": "AdvertApi.Models.MS",
+      "projectName": "AdvertApi.Models.Ms",
       "projectPath": "C:\\Users\\mohse\\Documents\\Sources\\WebAdvert.AdvertApi\\AdvertApi.Models\\AdvertApi.Models.csproj",
       "packagesPath": "C:\\Users\\mohse\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\mohse\\Documents\\Sources\\WebAdvert.AdvertApi\\AdvertApi.Models\\obj\\",

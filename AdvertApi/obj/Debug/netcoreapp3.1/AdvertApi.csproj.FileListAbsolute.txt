@@ -16,10 +16,12 @@ C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\bin\Debug\netcore
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\AdvertApi.csprojAssemblyReference.cache
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\staticwebassets\AdvertApi.StaticWebAssets.Manifest.cache
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\staticwebassets\AdvertApi.StaticWebAssets.xml
-C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\AdvertApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\AdvertApi.AssemblyInfoInputs.cache
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\AdvertApi.AssemblyInfo.cs
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\AdvertApi.RazorTargetAssemblyInfo.cache
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\AdvertApi.csproj.CopyComplete
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\AdvertApi.dll
 C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\AdvertApi.pdb
+C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\bin\Debug\netcoreapp3.1\AWSSDK.SimpleNotificationService.dll
+C:\Users\mohse\Documents\Sources\WebAdvert.AdvertApi\AdvertApi\obj\Debug\netcoreapp3.1\AdvertApi.MvcApplicationPartsAssemblyInfo.cache
