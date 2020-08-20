@@ -75,7 +75,7 @@ namespace AdvertApi.Services
             }
         }
 
-        public async Task<AdvertDbModel> GetById(string id)
+        public async Task<AdvertDbModel> GetByIdAsync(string id)
         {
             using (var client = new AmazonDynamoDBClient())
             {
@@ -88,6 +88,19 @@ namespace AdvertApi.Services
                     }
 
                     return record;
+                }
+            }
+        }
+
+        public async Task<List<AdvertModel>> GetAllAsync()
+        {
+            using (var client = new AmazonDynamoDBClient())
+            {
+                using (var context = new DynamoDBContext(client))
+                {
+                    var scanResult =
+                        await context.ScanAsync<AdvertDbModel>(new List<ScanCondition>()).GetNextSetAsync();
+                    return scanResult.Select(item => _mapper.Map<AdvertModel>(item)).ToList();
                 }
             }
         }

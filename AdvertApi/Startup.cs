@@ -54,6 +54,7 @@ namespace AdvertApi
             app.UseAuthorization();
 
             app.UseHealthChecks("/health");
+            app.UseCors();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
