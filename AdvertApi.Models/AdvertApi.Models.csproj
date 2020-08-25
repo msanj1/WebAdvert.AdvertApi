@@ -10,7 +10,7 @@
     <PackageProjectUrl>https://github.com/msanj1/WebAdvert.AdvertApi</PackageProjectUrl>
     <RepositoryUrl>https://github.com/msanj1/WebAdvert.AdvertApi</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.1.1</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
 </Project>

@@ -26,7 +26,7 @@
         "dependencies": {
           "AWSSDK.DynamoDBv2": "3.3.106.33",
           "AWSSDK.SimpleNotificationService": "3.3.102.8",
-          "AdvertApi.Models.Ms": "1.1.1",
+          "AdvertApi.Models.Ms": "1.2.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
           "Newtonsoft.Json": "12.0.3",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -410,7 +410,7 @@
         }
       },
       "System.Reflection.Emit/4.7.0": {},
-      "AdvertApi.Models.Ms/1.1.1": {
+      "AdvertApi.Models.Ms/1.2.0": {
         "runtime": {
           "AdvertApi.Models.dll": {}
         },
@@ -2195,7 +2195,7 @@
       "path": "system.reflection.emit/4.7.0",
       "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
     },
-    "AdvertApi.Models.Ms/1.1.1": {
+    "AdvertApi.Models.Ms/1.2.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
