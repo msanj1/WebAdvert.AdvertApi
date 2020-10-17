@@ -10,7 +10,7 @@
       "NETCOREAPP",
       "NETCOREAPP3_1"
     ],
-    "languageVersion": "",
+    "languageVersion": "8.0",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -24,11 +24,13 @@
     ".NETCoreApp,Version=v3.1": {
       "AdvertApi/1.0.0": {
         "dependencies": {
-          "AWSSDK.DynamoDBv2": "3.3.106.33",
-          "AWSSDK.SimpleNotificationService": "3.3.102.8",
+          "AWSSDK.DynamoDBv2": "3.5.0.12",
+          "AWSSDK.EC2": "3.5.4.4",
+          "AWSSDK.SimpleNotificationService": "3.5.0.12",
           "AdvertApi.Models.Ms": "1.2.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
           "Newtonsoft.Json": "12.0.3",
+          "Swashbuckle.AspNetCore": "5.5.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -350,46 +352,61 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "AWSSDK.Core/3.3.107.31": {
+      "AWSSDK.Core/3.5.1.10": {
         "runtime": {
-          "lib/netstandard2.0/AWSSDK.Core.dll": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.107.31"
+            "fileVersion": "3.5.1.10"
           }
         },
         "compile": {
-          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
         }
       },
-      "AWSSDK.DynamoDBv2/3.3.106.33": {
+      "AWSSDK.DynamoDBv2/3.5.0.12": {
         "dependencies": {
-          "AWSSDK.Core": "3.3.107.31"
+          "AWSSDK.Core": "3.5.1.10"
         },
         "runtime": {
-          "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.106.33"
+            "fileVersion": "3.5.0.12"
           }
         },
         "compile": {
-          "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {}
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {}
         }
       },
-      "AWSSDK.SimpleNotificationService/3.3.102.8": {
+      "AWSSDK.EC2/3.5.4.4": {
         "dependencies": {
-          "AWSSDK.Core": "3.3.107.31"
+          "AWSSDK.Core": "3.5.1.10"
         },
         "runtime": {
-          "lib/netstandard2.0/AWSSDK.SimpleNotificationService.dll": {
+          "lib/netcoreapp3.1/AWSSDK.EC2.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.102.8"
+            "fileVersion": "3.5.4.4"
           }
         },
         "compile": {
-          "lib/netstandard2.0/AWSSDK.SimpleNotificationService.dll": {}
+          "lib/netcoreapp3.1/AWSSDK.EC2.dll": {}
+        }
+      },
+      "AWSSDK.SimpleNotificationService/3.5.0.12": {
+        "dependencies": {
+          "AWSSDK.Core": "3.5.1.10"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.5.0.12"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.dll": {}
         }
       },
       "Microsoft.CSharp/4.7.0": {},
+      "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
       "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.0": {},
       "Microsoft.Extensions.Options/3.0.0": {
         "dependencies": {
@@ -398,6 +415,17 @@
         }
       },
       "Microsoft.Extensions.Primitives/3.0.0": {},
+      "Microsoft.OpenApi/1.1.4": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -407,6 +435,53 @@
         },
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore/5.5.1": {
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.5.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.5.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "5.5.1"
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/5.5.1": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.1.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "5.5.1.0",
+            "fileVersion": "5.5.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/5.5.1": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "5.5.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "5.5.1.0",
+            "fileVersion": "5.5.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/5.5.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "5.5.1.0",
+            "fileVersion": "5.5.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         }
       },
       "System.Reflection.Emit/4.7.0": {},
@@ -2132,26 +2207,33 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/8.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512"
     },
-    "AWSSDK.Core/3.3.107.31": {
+    "AWSSDK.Core/3.5.1.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GFwv1c2AO8fJ+NuQUVFNwoH18QQe5G0tI94DOjSWGcxzO/L22JAh2tBTI9Cd2SFyxo77Ip0UCzgHNVZNRL30nA==",
-      "path": "awssdk.core/3.3.107.31",
-      "hashPath": "awssdk.core.3.3.107.31.nupkg.sha512"
+      "sha512": "sha512-PZKY3oa7nLvbmuwvZw56Y2s2yE+KYd4lDIiHzebnEOekY1hNOLdOVM6xToeSHAr6BVFO7ydxmZW2/VxguBIp5Q==",
+      "path": "awssdk.core/3.5.1.10",
+      "hashPath": "awssdk.core.3.5.1.10.nupkg.sha512"
     },
-    "AWSSDK.DynamoDBv2/3.3.106.33": {
+    "AWSSDK.DynamoDBv2/3.5.0.12": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hsLadO0y9zB2A7OO6d/OnBxojKbPTNSQ/4mfQePYCISyaJw4sbS0+HoxaqG4VDji2d5PRaA8/SUYbmX9MKKBzQ==",
-      "path": "awssdk.dynamodbv2/3.3.106.33",
-      "hashPath": "awssdk.dynamodbv2.3.3.106.33.nupkg.sha512"
+      "sha512": "sha512-UHrZLJ9v5WU+wWO6Ror2TCa4Dm42b8GYzdB0BJisN/XDx9sbxs3d/03n2BF2fylYBqv8sKck9oaVLADMfI/QCw==",
+      "path": "awssdk.dynamodbv2/3.5.0.12",
+      "hashPath": "awssdk.dynamodbv2.3.5.0.12.nupkg.sha512"
     },
-    "AWSSDK.SimpleNotificationService/3.3.102.8": {
+    "AWSSDK.EC2/3.5.4.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pLLmV6kL5oyS+TE9QtnEFUnGLLElSENlt8gEriY1TuqFbMbYMyjBlSh+w7ihBpZd7bkZZJuy9IlDNLWNko5lcg==",
-      "path": "awssdk.simplenotificationservice/3.3.102.8",
-      "hashPath": "awssdk.simplenotificationservice.3.3.102.8.nupkg.sha512"
+      "sha512": "sha512-8yqXRC+ozZ7pKumbq7n9jwYD6qUMJ6LPggE84mgMH2ic46QRhlzNkwlK++RNl9yGgwUFF1poETilkhWHrczGgQ==",
+      "path": "awssdk.ec2/3.5.4.4",
+      "hashPath": "awssdk.ec2.3.5.4.4.nupkg.sha512"
+    },
+    "AWSSDK.SimpleNotificationService/3.5.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pBPQ8TyXI82CWH4bDQxj9g/KXP5c4WfzZVYUjEKmVGXNA1iavGOlmf6axE1vtGwVsuntxRIicxmhCPuYR2aPVw==",
+      "path": "awssdk.simplenotificationservice/3.5.0.12",
+      "hashPath": "awssdk.simplenotificationservice.3.5.0.12.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
@@ -2159,6 +2241,13 @@
       "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "path": "microsoft.csharp/4.7.0",
       "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
+      "path": "microsoft.extensions.apidescription.server/3.0.0",
+      "hashPath": "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.0": {
       "type": "package",
@@ -2181,12 +2270,47 @@
       "path": "microsoft.extensions.primitives/3.0.0",
       "hashPath": "microsoft.extensions.primitives.3.0.0.nupkg.sha512"
     },
+    "Microsoft.OpenApi/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6SW0tpbJslc8LAY1XniRfLVcJa7bJUbbwvo2/ZRqfkMbJrsqIj9045vg3STtZhDhYRKhpYgjqGU11eeW4Pzyrg==",
+      "path": "microsoft.openapi/1.1.4",
+      "hashPath": "microsoft.openapi.1.1.4.nupkg.sha512"
+    },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/5.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M1CdrptwDw/9Es/W1twwM6w2W0I019uhMDA5q3LUQo4TYZblDipu/oO5gtUpe0tEh1UOdrxlZeQBhmJSTtAtnA==",
+      "path": "swashbuckle.aspnetcore/5.5.1",
+      "hashPath": "swashbuckle.aspnetcore.5.5.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/5.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YlrnRiIFQdjh+MfBtiUzPPsRwk5745dv1DeWwgNBehN3PwZjIs+gczVaS0h5KKP9ON+e8GM3ieajV6BVZtc/dQ==",
+      "path": "swashbuckle.aspnetcore.swagger/5.5.1",
+      "hashPath": "swashbuckle.aspnetcore.swagger.5.5.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/5.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SftLofzIA063y73rn17YCf4dSXrgZdxLBig9E/HT4IIZ9mlsm12KmsNKUXf4U+X09KO8sVq1D29XfjVtC69eAg==",
+      "path": "swashbuckle.aspnetcore.swaggergen/5.5.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.5.5.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/5.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a2Ym9DYrvTZ/Yt8GVfn6M1ZP++Ra3KAfCNe4pTtkNiHpBgWhsYWUT3T07REtFImduBh93GAHuItZpltSOZV13A==",
+      "path": "swashbuckle.aspnetcore.swaggerui/5.5.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512"
     },
     "System.Reflection.Emit/4.7.0": {
       "type": "package",

@@ -29,37 +29,61 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "AWSSDK.Core/3.3.107.31": {
+      "AWSSDK.Core/3.5.1.10": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
         }
       },
-      "AWSSDK.DynamoDBv2/3.3.106.33": {
+      "AWSSDK.DynamoDBv2/3.5.0.12": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[3.3.107.25, 3.4.0)"
+          "AWSSDK.Core": "[3.5.1.10, 3.6.0)"
         },
         "compile": {
-          "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {}
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {}
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {}
         }
       },
-      "AWSSDK.SimpleNotificationService/3.3.102.8": {
+      "AWSSDK.EC2/3.5.4.4": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[3.3.107.31, 3.4.0)"
+          "AWSSDK.Core": "[3.5.1.10, 3.6.0)"
         },
         "compile": {
-          "lib/netstandard2.0/AWSSDK.SimpleNotificationService.dll": {}
+          "lib/netcoreapp3.1/AWSSDK.EC2.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/AWSSDK.SimpleNotificationService.dll": {}
+          "lib/netcoreapp3.1/AWSSDK.EC2.dll": {}
+        }
+      },
+      "AWSSDK.ServiceDiscovery/3.5.0.12": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.5.1.10, 3.6.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.ServiceDiscovery.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.ServiceDiscovery.dll": {}
+        }
+      },
+      "AWSSDK.SimpleNotificationService/3.5.0.12": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.5.1.10, 3.6.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.dll": {}
         }
       },
       "Microsoft.CSharp/4.7.0": {
@@ -69,6 +93,17 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Extensions.ApiDescription.Server.props": {},
+          "build/Microsoft.Extensions.ApiDescription.Server.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props": {},
+          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.0": {
@@ -102,6 +137,15 @@
           "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
+      "Microsoft.OpenApi/1.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -110,6 +154,60 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
+      },
+      "Swashbuckle.AspNetCore/5.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.5.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.5.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "5.5.1"
+        },
+        "build": {
+          "build/Swashbuckle.AspNetCore.props": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/5.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.1.4"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/5.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "5.5.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/5.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "System.Reflection.Emit/4.7.0": {
         "type": "package",
@@ -162,131 +260,150 @@
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
-    "AWSSDK.Core/3.3.107.31": {
-      "sha512": "GFwv1c2AO8fJ+NuQUVFNwoH18QQe5G0tI94DOjSWGcxzO/L22JAh2tBTI9Cd2SFyxo77Ip0UCzgHNVZNRL30nA==",
+    "AWSSDK.Core/3.5.1.10": {
+      "sha512": "PZKY3oa7nLvbmuwvZw56Y2s2yE+KYd4lDIiHzebnEOekY1hNOLdOVM6xToeSHAr6BVFO7ydxmZW2/VxguBIp5Q==",
       "type": "package",
-      "path": "awssdk.core/3.3.107.31",
+      "path": "awssdk.core/3.5.1.10",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.3.3.107.31.nupkg.sha512",
+        "awssdk.core.3.5.1.10.nupkg.sha512",
         "awssdk.core.nuspec",
-        "lib/MonoAndroid10/AWSSDK.Core.XML",
-        "lib/MonoAndroid10/AWSSDK.Core.dll",
-        "lib/MonoAndroid10/AWSSDK.Core.pdb",
-        "lib/MonoTouch10/AWSSDK.Core.XML",
-        "lib/MonoTouch10/AWSSDK.Core.dll",
-        "lib/Xamarin.Mac20/AWSSDK.Core.XML",
-        "lib/Xamarin.Mac20/AWSSDK.Core.dll",
-        "lib/Xamarin.iOS10/AWSSDK.Core.XML",
-        "lib/Xamarin.iOS10/AWSSDK.Core.dll",
         "lib/net35/AWSSDK.Core.dll",
         "lib/net35/AWSSDK.Core.pdb",
         "lib/net35/AWSSDK.Core.xml",
         "lib/net45/AWSSDK.Core.dll",
         "lib/net45/AWSSDK.Core.pdb",
         "lib/net45/AWSSDK.Core.xml",
+        "lib/netcoreapp3.1/AWSSDK.Core.dll",
+        "lib/netcoreapp3.1/AWSSDK.Core.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Core.xml",
         "lib/netstandard1.3/AWSSDK.Core.dll",
         "lib/netstandard1.3/AWSSDK.Core.pdb",
         "lib/netstandard1.3/AWSSDK.Core.xml",
         "lib/netstandard2.0/AWSSDK.Core.dll",
         "lib/netstandard2.0/AWSSDK.Core.pdb",
         "lib/netstandard2.0/AWSSDK.Core.xml",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Core.XML",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Core.dll",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Core.pdb",
-        "lib/uap/AWSSDK.Core.XML",
-        "lib/uap/AWSSDK.Core.dll",
-        "lib/uap/AWSSDK.Core.pdb",
-        "lib/win8/AWSSDK.Core.XML",
-        "lib/win8/AWSSDK.Core.dll",
-        "lib/win8/AWSSDK.Core.pdb",
-        "lib/wp8/AWSSDK.Core.XML",
-        "lib/wp8/AWSSDK.Core.dll",
-        "lib/wp8/AWSSDK.Core.pdb",
-        "lib/wpa81/AWSSDK.Core.XML",
-        "lib/wpa81/AWSSDK.Core.dll",
-        "lib/wpa81/AWSSDK.Core.pdb",
         "tools/account-management.ps1"
       ]
     },
-    "AWSSDK.DynamoDBv2/3.3.106.33": {
-      "sha512": "hsLadO0y9zB2A7OO6d/OnBxojKbPTNSQ/4mfQePYCISyaJw4sbS0+HoxaqG4VDji2d5PRaA8/SUYbmX9MKKBzQ==",
+    "AWSSDK.DynamoDBv2/3.5.0.12": {
+      "sha512": "UHrZLJ9v5WU+wWO6Ror2TCa4Dm42b8GYzdB0BJisN/XDx9sbxs3d/03n2BF2fylYBqv8sKck9oaVLADMfI/QCw==",
       "type": "package",
-      "path": "awssdk.dynamodbv2/3.3.106.33",
+      "path": "awssdk.dynamodbv2/3.5.0.12",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.DynamoDBv2.CodeAnalysis.dll",
-        "awssdk.dynamodbv2.3.3.106.33.nupkg.sha512",
+        "awssdk.dynamodbv2.3.5.0.12.nupkg.sha512",
         "awssdk.dynamodbv2.nuspec",
-        "lib/MonoAndroid10/AWSSDK.DynamoDBv2.XML",
-        "lib/MonoAndroid10/AWSSDK.DynamoDBv2.dll",
-        "lib/MonoTouch10/AWSSDK.DynamoDBv2.XML",
-        "lib/MonoTouch10/AWSSDK.DynamoDBv2.dll",
-        "lib/MonoTouch10/AWSSDK.DynamoDBv2.pdb",
-        "lib/Xamarin.iOS10/AWSSDK.DynamoDBv2.XML",
-        "lib/Xamarin.iOS10/AWSSDK.DynamoDBv2.dll",
         "lib/net35/AWSSDK.DynamoDBv2.dll",
         "lib/net35/AWSSDK.DynamoDBv2.pdb",
         "lib/net35/AWSSDK.DynamoDBv2.xml",
         "lib/net45/AWSSDK.DynamoDBv2.dll",
         "lib/net45/AWSSDK.DynamoDBv2.pdb",
         "lib/net45/AWSSDK.DynamoDBv2.xml",
+        "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll",
+        "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.pdb",
+        "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.xml",
         "lib/netstandard1.3/AWSSDK.DynamoDBv2.dll",
         "lib/netstandard1.3/AWSSDK.DynamoDBv2.pdb",
         "lib/netstandard1.3/AWSSDK.DynamoDBv2.xml",
         "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll",
         "lib/netstandard2.0/AWSSDK.DynamoDBv2.pdb",
         "lib/netstandard2.0/AWSSDK.DynamoDBv2.xml",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.DynamoDBv2.XML",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.DynamoDBv2.dll",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.DynamoDBv2.pdb",
-        "lib/uap/AWSSDK.DynamoDBv2.XML",
-        "lib/uap/AWSSDK.DynamoDBv2.dll",
-        "lib/uap/AWSSDK.DynamoDBv2.pdb",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
     },
-    "AWSSDK.SimpleNotificationService/3.3.102.8": {
-      "sha512": "pLLmV6kL5oyS+TE9QtnEFUnGLLElSENlt8gEriY1TuqFbMbYMyjBlSh+w7ihBpZd7bkZZJuy9IlDNLWNko5lcg==",
+    "AWSSDK.EC2/3.5.4.4": {
+      "sha512": "8yqXRC+ozZ7pKumbq7n9jwYD6qUMJ6LPggE84mgMH2ic46QRhlzNkwlK++RNl9yGgwUFF1poETilkhWHrczGgQ==",
       "type": "package",
-      "path": "awssdk.simplenotificationservice/3.3.102.8",
+      "path": "awssdk.ec2/3.5.4.4",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.EC2.CodeAnalysis.dll",
+        "awssdk.ec2.3.5.4.4.nupkg.sha512",
+        "awssdk.ec2.nuspec",
+        "lib/net35/AWSSDK.EC2.dll",
+        "lib/net35/AWSSDK.EC2.pdb",
+        "lib/net35/AWSSDK.EC2.xml",
+        "lib/net45/AWSSDK.EC2.dll",
+        "lib/net45/AWSSDK.EC2.pdb",
+        "lib/net45/AWSSDK.EC2.xml",
+        "lib/netcoreapp3.1/AWSSDK.EC2.dll",
+        "lib/netcoreapp3.1/AWSSDK.EC2.pdb",
+        "lib/netcoreapp3.1/AWSSDK.EC2.xml",
+        "lib/netstandard1.3/AWSSDK.EC2.dll",
+        "lib/netstandard1.3/AWSSDK.EC2.pdb",
+        "lib/netstandard1.3/AWSSDK.EC2.xml",
+        "lib/netstandard2.0/AWSSDK.EC2.dll",
+        "lib/netstandard2.0/AWSSDK.EC2.pdb",
+        "lib/netstandard2.0/AWSSDK.EC2.xml",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "AWSSDK.ServiceDiscovery/3.5.0.12": {
+      "sha512": "WD97j5WxGY3QOuAGJOu5qylp7FH/FnTxbkVIfZuSZ9KE5irRWOeZfG7IcICQB535YY/uRLf3eEHkaCheYgrwvQ==",
+      "type": "package",
+      "path": "awssdk.servicediscovery/3.5.0.12",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.ServiceDiscovery.CodeAnalysis.dll",
+        "awssdk.servicediscovery.3.5.0.12.nupkg.sha512",
+        "awssdk.servicediscovery.nuspec",
+        "lib/net35/AWSSDK.ServiceDiscovery.dll",
+        "lib/net35/AWSSDK.ServiceDiscovery.pdb",
+        "lib/net35/AWSSDK.ServiceDiscovery.xml",
+        "lib/net45/AWSSDK.ServiceDiscovery.dll",
+        "lib/net45/AWSSDK.ServiceDiscovery.pdb",
+        "lib/net45/AWSSDK.ServiceDiscovery.xml",
+        "lib/netcoreapp3.1/AWSSDK.ServiceDiscovery.dll",
+        "lib/netcoreapp3.1/AWSSDK.ServiceDiscovery.pdb",
+        "lib/netcoreapp3.1/AWSSDK.ServiceDiscovery.xml",
+        "lib/netstandard1.3/AWSSDK.ServiceDiscovery.dll",
+        "lib/netstandard1.3/AWSSDK.ServiceDiscovery.pdb",
+        "lib/netstandard1.3/AWSSDK.ServiceDiscovery.xml",
+        "lib/netstandard2.0/AWSSDK.ServiceDiscovery.dll",
+        "lib/netstandard2.0/AWSSDK.ServiceDiscovery.pdb",
+        "lib/netstandard2.0/AWSSDK.ServiceDiscovery.xml",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "AWSSDK.SimpleNotificationService/3.5.0.12": {
+      "sha512": "pBPQ8TyXI82CWH4bDQxj9g/KXP5c4WfzZVYUjEKmVGXNA1iavGOlmf6axE1vtGwVsuntxRIicxmhCPuYR2aPVw==",
+      "type": "package",
+      "path": "awssdk.simplenotificationservice/3.5.0.12",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.SimpleNotificationService.CodeAnalysis.dll",
-        "awssdk.simplenotificationservice.3.3.102.8.nupkg.sha512",
+        "awssdk.simplenotificationservice.3.5.0.12.nupkg.sha512",
         "awssdk.simplenotificationservice.nuspec",
-        "lib/MonoAndroid10/AWSSDK.SimpleNotificationService.XML",
-        "lib/MonoAndroid10/AWSSDK.SimpleNotificationService.dll",
-        "lib/MonoTouch10/AWSSDK.SimpleNotificationService.XML",
-        "lib/MonoTouch10/AWSSDK.SimpleNotificationService.dll",
-        "lib/MonoTouch10/AWSSDK.SimpleNotificationService.pdb",
-        "lib/Xamarin.iOS10/AWSSDK.SimpleNotificationService.XML",
-        "lib/Xamarin.iOS10/AWSSDK.SimpleNotificationService.dll",
         "lib/net35/AWSSDK.SimpleNotificationService.dll",
         "lib/net35/AWSSDK.SimpleNotificationService.pdb",
         "lib/net35/AWSSDK.SimpleNotificationService.xml",
         "lib/net45/AWSSDK.SimpleNotificationService.dll",
         "lib/net45/AWSSDK.SimpleNotificationService.pdb",
         "lib/net45/AWSSDK.SimpleNotificationService.xml",
+        "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.dll",
+        "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.pdb",
+        "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.xml",
         "lib/netstandard1.3/AWSSDK.SimpleNotificationService.dll",
         "lib/netstandard1.3/AWSSDK.SimpleNotificationService.pdb",
         "lib/netstandard1.3/AWSSDK.SimpleNotificationService.xml",
         "lib/netstandard2.0/AWSSDK.SimpleNotificationService.dll",
         "lib/netstandard2.0/AWSSDK.SimpleNotificationService.pdb",
         "lib/netstandard2.0/AWSSDK.SimpleNotificationService.xml",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.SimpleNotificationService.XML",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.SimpleNotificationService.dll",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.SimpleNotificationService.pdb",
-        "lib/uap/AWSSDK.SimpleNotificationService.XML",
-        "lib/uap/AWSSDK.SimpleNotificationService.dll",
-        "lib/uap/AWSSDK.SimpleNotificationService.pdb",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
@@ -360,6 +477,33 @@
         "version.txt"
       ]
     },
+    "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
+      "sha512": "LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
+      "type": "package",
+      "path": "microsoft.extensions.apidescription.server/3.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.Extensions.ApiDescription.Server.props",
+        "build/Microsoft.Extensions.ApiDescription.Server.targets",
+        "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props",
+        "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets",
+        "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+        "microsoft.extensions.apidescription.server.nuspec",
+        "tools/Newtonsoft.Json.dll",
+        "tools/dotnet-getdocument.deps.json",
+        "tools/dotnet-getdocument.dll",
+        "tools/dotnet-getdocument.runtimeconfig.json",
+        "tools/net461-x86/GetDocument.Insider.exe",
+        "tools/net461-x86/GetDocument.Insider.exe.config",
+        "tools/net461/GetDocument.Insider.exe",
+        "tools/net461/GetDocument.Insider.exe.config",
+        "tools/netcoreapp2.1/GetDocument.Insider.deps.json",
+        "tools/netcoreapp2.1/GetDocument.Insider.dll",
+        "tools/netcoreapp2.1/GetDocument.Insider.runtimeconfig.json"
+      ]
+    },
     "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.0": {
       "sha512": "ofQRroDlzJ0xKOtzNuaVt6QKNImFkhkG0lIMpGl7PtXnIf5SuLWBeiQZAP8DNSxDBJJdcsPkiJiMYK2WA5H8dQ==",
       "type": "package",
@@ -403,6 +547,23 @@
         "microsoft.extensions.primitives.nuspec"
       ]
     },
+    "Microsoft.OpenApi/1.1.4": {
+      "sha512": "6SW0tpbJslc8LAY1XniRfLVcJa7bJUbbwvo2/ZRqfkMbJrsqIj9045vg3STtZhDhYRKhpYgjqGU11eeW4Pzyrg==",
+      "type": "package",
+      "path": "microsoft.openapi/1.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/Microsoft.OpenApi.dll",
+        "lib/net46/Microsoft.OpenApi.pdb",
+        "lib/net46/Microsoft.OpenApi.xml",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.1.4.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    },
     "Newtonsoft.Json/12.0.3": {
       "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
@@ -432,6 +593,69 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "Swashbuckle.AspNetCore/5.5.1": {
+      "sha512": "M1CdrptwDw/9Es/W1twwM6w2W0I019uhMDA5q3LUQo4TYZblDipu/oO5gtUpe0tEh1UOdrxlZeQBhmJSTtAtnA==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore/5.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Swashbuckle.AspNetCore.props",
+        "swashbuckle.aspnetcore.5.5.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.Swagger/5.5.1": {
+      "sha512": "YlrnRiIFQdjh+MfBtiUzPPsRwk5745dv1DeWwgNBehN3PwZjIs+gczVaS0h5KKP9ON+e8GM3ieajV6BVZtc/dQ==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swagger/5.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "swashbuckle.aspnetcore.swagger.5.5.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/5.5.1": {
+      "sha512": "SftLofzIA063y73rn17YCf4dSXrgZdxLBig9E/HT4IIZ9mlsm12KmsNKUXf4U+X09KO8sVq1D29XfjVtC69eAg==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggergen/5.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "swashbuckle.aspnetcore.swaggergen.5.5.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/5.5.1": {
+      "sha512": "a2Ym9DYrvTZ/Yt8GVfn6M1ZP++Ra3KAfCNe4pTtkNiHpBgWhsYWUT3T07REtFImduBh93GAHuItZpltSOZV13A==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggerui/5.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
     "System.Reflection.Emit/4.7.0": {
@@ -496,11 +720,14 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "AWSSDK.DynamoDBv2 >= 3.3.106.33",
-      "AWSSDK.SimpleNotificationService >= 3.3.102.8",
+      "AWSSDK.DynamoDBv2 >= 3.5.0.12",
+      "AWSSDK.EC2 >= 3.5.4.4",
+      "AWSSDK.ServiceDiscovery >= 3.5.0.12",
+      "AWSSDK.SimpleNotificationService >= 3.5.0.12",
       "AdvertApi.Models.Ms >= 1.2.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.0.1",
-      "Newtonsoft.Json >= 12.0.3"
+      "Newtonsoft.Json >= 12.0.3",
+      "Swashbuckle.AspNetCore >= 5.5.1"
     ]
   },
   "packageFolders": {
@@ -556,11 +783,19 @@
         "dependencies": {
           "AWSSDK.DynamoDBv2": {
             "target": "Package",
-            "version": "[3.3.106.33, )"
+            "version": "[3.5.0.12, )"
+          },
+          "AWSSDK.EC2": {
+            "target": "Package",
+            "version": "[3.5.4.4, )"
+          },
+          "AWSSDK.ServiceDiscovery": {
+            "target": "Package",
+            "version": "[3.5.0.12, )"
           },
           "AWSSDK.SimpleNotificationService": {
             "target": "Package",
-            "version": "[3.3.102.8, )"
+            "version": "[3.5.0.12, )"
           },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
@@ -569,6 +804,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[5.5.1, )"
           }
         },
         "imports": [
@@ -589,7 +828,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
